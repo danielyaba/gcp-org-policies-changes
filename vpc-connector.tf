@@ -1,5 +1,5 @@
 resource "google_vpc_access_connector" "connector" {
-  project = module.project.project_id
+  project = var.project_id
   name    = "vpc-connector"
   subnet {
     name       = "vpc-connector" # must be /28
