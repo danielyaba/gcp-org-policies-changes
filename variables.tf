@@ -1,8 +1,3 @@
-# variable "security_alerts" {
-#   type        = map(any)
-#   description = "Security alerts to deploy."
-# }
-
 variable "organization_id" {
   type        = string
   description = "The organization id."
