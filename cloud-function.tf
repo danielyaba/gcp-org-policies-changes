@@ -24,7 +24,9 @@ resource "google_cloudfunctions2_function" "function" {
       FROM_EMAIL  = var.smtp_configs.from_email
       GROUP_EMAIL = var.smtp_configs.group_email
     }
+    vpc_connector = google_vpc_access_connector.connector.name
     ingress_settings = "ALLOW_INTERNAL_ONLY"
+    vpc_connector_egress_settings = "ALLOW_ALL"
   }
   event_trigger {
     trigger_region        = var.region
@@ -33,6 +35,7 @@ resource "google_cloudfunctions2_function" "function" {
     retry_policy          = "RETRY_POLICY_DO_NOT_RETRY"
     service_account_email = google_service_account.service_account.email
   }
+  
 }
 
 
