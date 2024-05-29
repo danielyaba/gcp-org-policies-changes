@@ -1,5 +1,5 @@
 resource "google_cloudfunctions2_function" "function" {
-  name        = "org-policy-changes-cf"
+  name        = "org-policies-changes-cf"
   project     = var.project_id
   location    = var.region
   description = "Cloud function to sending email alerts"
@@ -35,7 +35,6 @@ resource "google_cloudfunctions2_function" "function" {
     retry_policy          = "RETRY_POLICY_DO_NOT_RETRY"
     service_account_email = google_service_account.service_account.email
   }
-
 }
 
 
