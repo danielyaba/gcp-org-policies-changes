@@ -28,4 +28,14 @@ module "org-policies-changes" {
 | [project_id](variables.tf#L11) | Project ID. | <code>string</code> | ✓ |  |
 | [region](variables.tf#L16) | Region. | <code>string</code> | ✓ |  |
 | [smtp_config](variables.tf#L21) | SMTP configuration. | <code title="map&#40;object&#40;&#123;&#10;  smtp_server &#61; string&#10;  from_email  &#61; string&#10;  group_email &#61; string&#10;&#125;&#41;&#41;">map&#40;object&#40;&#123;&#8230;&#125;&#41;&#41;</code> | ✓ |  |
+
+## Outputs
+
+| name | description | sensitive |
+|---|---|:---:|
+| [cloud_function](outputs.tf#L1) | Cloud function details. |  |
+| [gcs_bucket](outputs.tf#L6) | GCS Bucket details. |  |
+| [log_sink](outputs.tf#L11) | Orgnization Log Sink details |  |
+| [pubsub_topic](outputs.tf#L16) | Pub/Sub topic details. |  |
+| [service_account](outputs.tf#L21) | Service Account details. |  |
 <!-- END TFDOC -->
