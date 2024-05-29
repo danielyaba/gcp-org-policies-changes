@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "bucket" {
-  name                        = "${var.project_id}-org-policies-changes-gcf-source"
+  name                        = "${var.project_id}-${var.prefix}-gcf-source"
   project                     = var.project_id
   location                    = var.region
   uniform_bucket_level_access = true

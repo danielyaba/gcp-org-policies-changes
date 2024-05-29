@@ -1,5 +1,5 @@
 resource "google_cloudfunctions2_function" "function" {
-  name        = "org-policies-changes-cf"
+  name        = "${var.prefix}-cf"
   project     = var.project_id
   location    = var.region
   description = "Cloud function to sending email alerts"

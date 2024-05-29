@@ -1,5 +1,5 @@
 resource "google_pubsub_topic" "topic" {
-  name = "org-policies-changes-topic"
+  name = "${var.prefix}-topic"
 }
 
 resource "google_pubsub_topic_iam_binding" "binding" {

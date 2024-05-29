@@ -1,7 +1,7 @@
 resource "google_service_account" "service_account" {
   project      = var.project_id
-  account_id   = "org-policies-changes-sa"
-  display_name = "org-policies-changes-sa"
+  account_id   = "${var.prefix}-sa"
+  display_name = "${var.prefix}-sa"
 }
 
 resource "google_cloudfunctions2_function_iam_binding" "binding" {

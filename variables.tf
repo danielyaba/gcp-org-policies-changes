@@ -1,16 +1,21 @@
+variable "prefix" {
+  description = "Prefix naming convension."
+  type = string
+}
+
 variable "organization_id" {
-  type        = string
   description = "Organization ID."
+  type        = string
 }
 
 variable "project_id" {
-  type        = string
   description = "Project ID."
+  type        = string
 }
 
 variable "region" {
-  type = string
   description = "Region."
+  type = string
 }
 
 variable "smtp_config" {
