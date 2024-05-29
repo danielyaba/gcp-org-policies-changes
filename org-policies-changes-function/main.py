@@ -6,9 +6,7 @@ from email.mime.text import MIMEText
 
 
 def send_email(subject: str, message_body: str) -> None:
-    """
-    Function for sending emails with a given subject and body.
-    """
+    """Function for sending emails with a given subject and body."""
     # SMTP server details
     smtp_server = os.environ.get('SMTP_SERVER')
     smtp_port = int(os.environ.get('SMTP_PORT', 25))  # Default to port 25 if not provided
@@ -32,9 +30,7 @@ def send_email(subject: str, message_body: str) -> None:
 
 
 def get_topic_massage(event, context):
-    """
-    Triggered by a change in organization policy logged to Pub/Sub.
-    """
+    """Triggered by a change in organization policy logged to Pub/Sub."""
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
     pubsub_message_dict = json.loads(pubsub_message)
     method = pubsub_message_dict["protoPayload"]["methodName"]
