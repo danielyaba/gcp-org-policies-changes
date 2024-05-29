@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "bucket" {
   name                        = "${var.project_id}-org-policy-changes-gcf-source"
-  project = var.project_id
+  project                     = var.project_id
   location                    = var.region
   uniform_bucket_level_access = true
 }
